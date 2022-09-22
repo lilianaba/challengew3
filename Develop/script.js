@@ -18,7 +18,7 @@ console.log("lowerCase: " + lowerCase);//verify user selection
 
 
 var upperCase = confirm("Do you want to include Uppercase characters","");
-console.log("upperCase: "+upperCase);//verify user selection
+console.log(`upperCase: ${upperCase}`);//verify user selection
 
 
 var numbers = confirm("Do you want to include Numbers","");
@@ -38,7 +38,7 @@ var option = options(lowerCase,upperCase, numbers,specialCharacters);
 
 
 //3-generate password
-// passwordgeneration(length,option);
+return passwordgeneration(length,option);//adding return to actually display the password 
 
 
 
@@ -90,7 +90,7 @@ function passwordlength(length){
 };
 
 function options(lowerCase, upperCase, numbers, specialCharacters){
-  var option ;
+  var option=[];
 
   switch(lowerCase){
     // case false:
@@ -117,7 +117,8 @@ function options(lowerCase, upperCase, numbers, specialCharacters){
     // case false:
       //option;
     case true:
-      option = option + " !#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
+      option = option + " !#$%&'()*+,-./:;<=>?@[\]^_`{|}~" + '"';
+      // try to change to array
   }
 
   

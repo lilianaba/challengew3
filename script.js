@@ -36,12 +36,14 @@ passwordlength(length);
 var option = options(lowerCase,upperCase, numbers,specialCharacters);
 
 
-//3-generate password
+//3-generate password and return result
 // passwordgeneration(length,option);
+return passwordgeneration(length,option);//adding return to actually display the password 
+
 
 //4-display generated password
 // return "Generate password will be displayed here!";
-// return password;
+
 
 //3 AND 4 generate password and display it
 var createdPassword ="";
@@ -114,7 +116,7 @@ function options(lowerCase, upperCase, numbers, specialCharacters){
     // case false:
       //option;
     case true:
-      option = option + " !#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
+      option = option + " !#$%\"&'()*+,-./:;<=>?@[\]^_`{|}~";
   }
 
   
