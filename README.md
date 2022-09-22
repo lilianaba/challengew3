@@ -1,5 +1,7 @@
 # 03 JavaScript: Password Generator
 
+## Live Site
+[Live Site](https://lilianaba.github.io/challengew3/)
 
 ## Your Task
 
