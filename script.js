@@ -8,7 +8,7 @@ console.log("You clicked the botton!!!")
 //1-presenting the prompts (the differents options)
 
 //    a. Password length 8<120
-  var length = parseFloat(prompt("Enter password lengh from 8 to 120",""));
+  var length = parseFloat(prompt("Enter password lengh from 8 to 128",""));
       
       // passwordlength(length);
    
