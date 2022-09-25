@@ -89,7 +89,7 @@ function passwordlength(length){
 };
 
 function options(lowerCase, upperCase, numbers, specialCharacters){
-  var option ;
+  var option = [];
 
   switch(lowerCase){
     // case false:
