@@ -95,28 +95,36 @@ function options(lowerCase, upperCase, numbers, specialCharacters){
     // case false:
      // option;
     case true:
-      option = "abcdefghijklmnopqrstuvwxyz";
+      // option = "abcdefghijklmnopqrstuvwxyz";
+      option = option.concat( "abcdefghijklmnopqrstuvwxyz".split(''));
+
   }
 
   switch(upperCase){
     // case false:
       //option;
     case true:
-      option = option + "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+      // option = option + "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+      option = option.concat("ABCDEFGHIJKLMNOPQRSTUVWXYZ".split(''));
+
   }
 
   switch(numbers){
     // case false:
       //option;
     case true:
-      option = option + "0123456789";
+      // option = option + "0123456789";
+      option = option.concat('0123456789'.split(''));
   }
   
   switch(specialCharacters){
     // case false:
       //option;
     case true:
-      option = option + " !#$%\"&'()*+,-./:;<=>?@[\]^_`{|}~";
+      // option = option + " !#$%\"&'()*+,-./:;<=>?@[\]^_`{|}~";
+      option = option.concat('"');
+      option = option.concat(" !#$%&'()*+,-./:;<=>?@[\]^_`{|}~".split(''))
+     
   }
 
   
@@ -140,9 +148,11 @@ function options(lowerCase, upperCase, numbers, specialCharacters){
 
 function passwordgeneration(length, option){
   var createdPassword ="";
-  for (var i = 0; i<= length; i++){
-    var randomNumber = Math.floor(Math.random()* option.length);
-    createdPassword += option.substring(randomNumber,randomNumber+1);
+  for (var i = 0; i< length; i++){ // '<=' updated to just < to calculate the correct length
+     var randomNumber = Math.floor(Math.random()* option.length);
+     createdPassword +=option[randomNumber];
+   
+    // createdPassword += option.substring(randomNumber,randomNumber+1); //this option works with string option
     // console.log(password);
   }
   // password = document.getElementById("password").value ;
