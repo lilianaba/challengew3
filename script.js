@@ -74,7 +74,7 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-//    a. Password length 8<120
+//    a. Password length 8<128
 function passwordlength(length){
 
   if(length >= 8 && length<= 128){
