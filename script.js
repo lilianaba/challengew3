@@ -77,7 +77,7 @@ generateBtn.addEventListener("click", writePassword);
 //    a. Password length 8<120
 function passwordlength(length){
 
-  if(length >= 8 && length<= 120){
+  if(length >= 8 && length<= 128){
     length == length;
 
     //validate if my number is storaged
