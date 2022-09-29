@@ -7,8 +7,9 @@ console.log("You clicked the botton!!!")
 
 //1-presenting the prompts (the differents options)
 
-//    a. Password length 8<120
+//    a. Password length 8<128
   var length = parseFloat(prompt("Enter password lengh from 8 to 128",""));
+  passwordlength(length);
       
       // passwordlength(length);
    
@@ -32,7 +33,7 @@ console.log(`special characters: ${specialCharacters}`);//verify user selection
 
 
 //2-Validate input length is correct and at least 1 option has been selected
-passwordlength(length);
+// passwordlength(length);
 var option = options(lowerCase,upperCase, numbers,specialCharacters);
 
 
@@ -86,7 +87,7 @@ function passwordlength(length){
     return length;
       
   } else (prompt("Please select a valid number"));
-    return;
+    // return;
 };
 
 function options(lowerCase, upperCase, numbers, specialCharacters){
@@ -150,7 +151,12 @@ function passwordgeneration(length, option){
   }
   // password = document.getElementById("password").value ;
   console.log("Generated password: " + createdPassword);
+if (createdPassword == null || createdPassword == ""){
+  return "No password will be generated, you choose a wrong option"
+
+}
 return createdPassword;
+;
 
 }
 
